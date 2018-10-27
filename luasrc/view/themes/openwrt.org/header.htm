@@ -167,17 +167,20 @@
 	if (w < 992) {
 		document.addEventListener('DOMContentLoaded', function() {
 			var event = ('ontouchstart' in window) ? 'touchstart' : 'click';
-			document.querySelectorAll('ul.mainmenu.l1 > li > a').forEach(function(a) {
-				a.addEventListener(event, function(ev) {
+			document.querySelectorAll('ul.mainmenu.l1 > li > a').forEach(function (a) {
+				a.addEventListener(event, function (ev) {
 					var a = ev.target, ul1 = a.parentNode.parentNode, ul2 = a.nextElementSibling;
-					document.querySelectorAll('ul.mainmenu.l1 > li.active').forEach(function(li) {
-						if (li !== a.parentNode)
+					document.querySelectorAll('ul.mainmenu.l1 > li.active').forEach(function (li) {
+						if (li !== a.parentNode) {
 							li.classList.remove('active');
+						}	
 					});
-					if (!ul2)
+					if (!ul2) {
 						return;
-					if (ul2.parentNode.offsetLeft + ul2.offsetWidth <= ul1.offsetLeft + ul1.offsetWidth)
+					}
+					if (ul2.parentNode.offsetLeft + ul2.offsetWidth <= ul1.offsetLeft + ul1.offsetWidth) {
 						ul2.classList.add('align-left');
+					}
 					ul1.classList.add('active');
 					a.parentNode.classList.add('active');
 					a.blur();
@@ -187,12 +190,14 @@
 			});
 			document.addEventListener(event, function(ev) {
 				var t = ev.target;
-				while (t && t.id != 'mainmenu')
+				while (t && t.id != 'mainmenu') {
 					t = t.parentNode;
-				if (!t)
+				}
+				if (!t) {
 					document.querySelectorAll('ul.mainmenu > li.active').forEach(function(li) {
 						li.classList.remove('active');
 					});
+				}
 			});
 		});
 	}

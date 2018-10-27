@@ -473,6 +473,10 @@ textarea {
 	border-color: #000000;
 }
 
+textarea {
+	font-family: Menlo, Consolas, monospace;
+}
+
 input[type=image] {
 	border: none;
 }
@@ -496,7 +500,8 @@ input[type=password] {
 	width: 20em;
 	font-size: inherit;
 	line-height: 13pt;
-	height: 14pt;
+	height: 16pt;
+	border-radius: 0;
 }
 
 select[multiple] {
@@ -529,7 +534,6 @@ img.cbi-image-button {
 
 .btn, .cbi-button {
 	padding: 0 .5em;
-	border-radius: 3px;
 	border: 1px solid #aaa;
 	text-decoration: none;
 	color: #000;
@@ -538,7 +542,6 @@ img.cbi-image-button {
 	-webkit-appearance: none;
 	background: #fff;
 	text-align: center;
-	font-weight: bold;
 	line-height: 13pt;
 	height: 16pt;
 }
@@ -941,7 +944,7 @@ ul.cbi-tabmenu {
 	list-style-type: none;
 	display: flex;
 	margin: 0 0 .5em 0 !important;
-	padding: 0 0 0 5px;
+	padding: 0 0 0 2pt;
 	border-bottom: 1px solid #bbb;
 }
 
@@ -952,8 +955,7 @@ ul.cbi-tabmenu li {
 	border: 1px solid #bbb;
 	border-bottom: none;
 	border-radius: 3px 3px 0 0;
-	background: linear-gradient(#ddd 90%, #aaa 100%);
-	color: #888;
+	color: #666;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	word-wrap: break-word;
@@ -1154,13 +1156,12 @@ ul.cbi-tabmenu li.cbi-tab {
 input[type="text"] + .cbi-button,
 input[type="password"] + .cbi-button,
 select + .cbi-button {
-	border-radius: 0 3px 3px 0;
 	border: 1px outset #000;
 	margin: 0 0 1px -2px;
-	padding: 0 6px;
+	padding: 2pt 4pt;
 	vertical-align: top;
 	display: inline-block;
-	height: 14pt;
+	height: 16pt;
 	font-size: 10pt;
 	line-height: 12pt;
 }

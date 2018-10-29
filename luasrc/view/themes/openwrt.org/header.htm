@@ -151,7 +151,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<%=luci.i18n.context.lang%>" lang="<%=luci.i18n.context.lang%>">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=1200" />
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <link rel="stylesheet" type="text/css" media="screen" href="<%=media%>/cascade.css" />
 <% if node and node.css then %><link rel="stylesheet" type="text/css" media="screen" href="<%=resource%>/<%=node.css%>" />
@@ -162,46 +162,6 @@
 <% end -%>
 <script type="text/javascript" src="<%=resource%>/cbi.js"></script>
 <script type="text/javascript" src="<%=resource%>/xhr.js"></script>
-<script type="text/javascript">//<![CDATA[
-	var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-	if (w < 992) {
-		document.addEventListener('DOMContentLoaded', function() {
-			var event = ('ontouchstart' in window) ? 'touchstart' : 'click';
-			document.querySelectorAll('ul.mainmenu.l1 > li > a').forEach(function (a) {
-				a.addEventListener(event, function (ev) {
-					var a = ev.target, ul1 = a.parentNode.parentNode, ul2 = a.nextElementSibling;
-					document.querySelectorAll('ul.mainmenu.l1 > li.active').forEach(function (li) {
-						if (li !== a.parentNode) {
-							li.classList.remove('active');
-						}	
-					});
-					if (!ul2) {
-						return;
-					}
-					if (ul2.parentNode.offsetLeft + ul2.offsetWidth <= ul1.offsetLeft + ul1.offsetWidth) {
-						ul2.classList.add('align-left');
-					}
-					ul1.classList.add('active');
-					a.parentNode.classList.add('active');
-					a.blur();
-					ev.preventDefault();
-					ev.stopPropagation();
-				});
-			});
-			document.addEventListener(event, function(ev) {
-				var t = ev.target;
-				while (t && t.id != 'mainmenu') {
-					t = t.parentNode;
-				}
-				if (!t) {
-					document.querySelectorAll('ul.mainmenu > li.active').forEach(function(li) {
-						li.classList.remove('active');
-					});
-				}
-			});
-		});
-	}
-//]]></script>
 <title><%=striptags( (boardinfo.hostname or "?") .. ( (node and node.title) and ' - ' .. translate(node.title) or '')) %> - LuCI</title>
 </head>
 <body class="lang_<%=luci.i18n.context.lang%>" data-page="<%= table.concat(disp.context.requestpath, "-") %>">

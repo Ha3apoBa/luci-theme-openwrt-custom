@@ -12,7 +12,7 @@
 	}
 	body {
 		color: #ffffff;
-		background-color: #4a6b7c;
+		background-color: #122;
 		background-position: bottom center;
 		background-repeat: repeat-x;
 		font-family: Arial, Verdana, sans-serif;
@@ -141,9 +141,9 @@
 		text-decoration: none;
 	}
 	#mainmenu ul li.selected>a {
-		background: #fff;
-		color: #37c;
-		border: 1px dotted #444;
+		background: #ddd;
+		color: #444;
+		border: none;
 		border-width: 1px 0;
 	}
 	#mainmenu ul li.selected:first-child>a {
@@ -557,7 +557,7 @@
 		border-left: 1px solid #666666;
 	}
 	.cbi-rowstyle-1 {
-		background-color: #eeeeff;
+		background-color: #eee;
 		color: #000000;
 	}
 	.cbi-rowstyle-2 {
@@ -1068,7 +1068,7 @@
 		background: #eee;
 	}
 	.ifacebox-head.active {
-		background: #90c0e0;
+		background: #bdd;
 	}
 	.ifacebadge, .zonebadge {
 		align-items: center;

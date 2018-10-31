@@ -567,7 +567,7 @@
 		clear: left;
 		vertical-align: middle;
 		padding: 0.25em 0.6em;
-		border-bottom: 1px dotted #bbbbbb;
+		border-bottom: 1px solid #bbbbbb;
 	}
 	.cbi-value:hover {
 		background: #f8f8f8;
@@ -621,13 +621,13 @@
 	}
 	div.cbi-optionals {
 		padding: 0.25em;
-		border-bottom: 1px dotted #bbbbbb;
+		border-bottom: 1px solid #bbbbbb;
 	}
 	.cbi-section-node {
 		clear: both;
 		padding-bottom: 0;
 		position: relative;
-		border: 1px dotted #555;
+		border: 1px solid #bbbbbb;
 		background: #fff;
 		margin-bottom: .5em;
 	}
@@ -641,7 +641,7 @@
 	.table.cbi-section-table {
 		width: 100%;
 		font-size: 95%;
-		border: 1px dotted #444;
+		border: 1px solid #bbbbbb;
 		background: #fff;
 		margin: 0 0 .5em 0;
 	}
@@ -770,7 +770,7 @@
 		color: red;
 		background-color: white;
 		font-size: 95%;
-		border: 1px dotted red;
+		border: 1px solid red;
 		margin: 3px;
 		padding: 3px;
 	}
@@ -1051,7 +1051,7 @@
 	}
 	.error500 {
 		white-space: normal;
-		border: 1px dotted #ff0000;
+		border: 1px solid #ff0000;
 		background-color: #ffffff;
 		color: #000000;
 		padding: 0.5em;

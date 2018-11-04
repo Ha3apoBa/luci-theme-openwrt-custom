@@ -439,7 +439,7 @@
 		padding: 0 3px;
 	}
 	select, input[type=text], input[type=password] {
-		width: 20em;
+		width: 30em;
 		font-size: inherit;
 		line-height: 13pt;
 		height: 16pt;
@@ -575,12 +575,12 @@
 	}
 	.cbi-value-title {
 		float: left;
-		width: 40%;
+		width: 30%;
 		line-height: 1.8em;
 	}
 	.cbi-value-field {
 		width: 58%;
-		margin-left: 40%;
+		margin-left: 30%;
 		padding: 0.25em 0;
 	}
 	.td.cbi-value-field {

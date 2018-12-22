@@ -886,7 +886,6 @@
 
     .cbi-section-remove > .cbi-button {
         margin-bottom: -1px;
-        border-radius: 3px 3px 0 0;
     }
 
     .cbi-section-node + .cbi-section-create {
